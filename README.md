@@ -20,18 +20,22 @@ The first phase of this project consists of three key processes: <i><b>setting u
 
 <h2>Setting Up the SIEM Tool:</h2>
 
-<b>Microsoft Sentinel</b>: Connects to LAW and acts as the SIEM tool. It maps global incidents and alerts in real-time using geo-IP watchlist data and KQL queries.<br><br>
+<b>Microsoft Sentinel</b>: Connects to LAW and acts as the SIEM tool. It maps global incidents and alerts in real-time using geo-IP watchlist data and KQL queries.<br><hr>
 
 <h3>The unsecured environment was monitored for 24 hours, during which key security metrics were recorded.</h3><br>
 
 Environment Architecture Before Hardening and Security Controls Implementation<br>
 -- Insert Diagram -- <br><br>
 
-The SIEM Workbooks or Attack Maps reflected the following images, pinpointing the various sources of attacks targeting the following resources<br>
--- Insert Windows RDP Fail --<br>
--- Insert Linux SSH Logon Fail --<br>
--- Insert SQL Server Logon Fail --<br>
--- Insert NSG Malicious traffic that got in --<br><br>
+<b>The SIEM Workbooks or Attack Maps reflected the following images, pinpointing the various sources of attacks targeting the following resources</b><br>
+![WINDOWS-RDP-AUTH-FAIL 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/904c024d-5e4c-42a4-b39b-5c38b00fdac6)
+<br><br>
+![LINUX-SSS-AUTH-FAIL 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/62ec780a-55de-4531-a6c2-e2f164cd3ce4)
+<br><br>
+![MSSQL 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/d03e7819-2d1e-4cfe-8823-7f28a77bc673)
+<br><br>
+![NSG-ALLOWED-IN 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/ff925858-db99-4d08-ab45-f40607e691f5)
+<br><br>
 
 <h3>The Following Metrics Before Security Hardening</h3>
 
@@ -42,8 +46,6 @@ The SIEM Workbooks or Attack Maps reflected the following images, pinpointing th
 | SecurityAlert            | 35     |
 | SecurityIncident         | 276    |
 | AzureNetworkAnalytics_CL | 2490   |
-
-
 
 <br><hr>
 
@@ -56,7 +58,7 @@ The second phase of this project involves implementing the following security ha
 -- Insert Diagram -- <br><br>
 
 <h3>The Attack Maps After Security Hardening</h3>
-All map queries returned no results due to no alter instances generated within the 24 hours period after hardening.<br><br>
+<i></u>All map queries returned no results due to no alter instances generated within the 24 hours period after hardening.</i><br><br>
 
 <h3>The Following Metrics After Security Hardening</h3>
 
@@ -67,22 +69,20 @@ All map queries returned no results due to no alter instances generated within t
 | SecurityAlert            | 0      |
 | SecurityIncident         | 0      |
 | AzureNetworkAnalytics_CL | 0      |
+
 <br><hr>
 
 <h3>Comparison Of The Metrics Before & After Security Hardening</h3>
-| ------------------------------------|
-| BEFORE                              |
-| ------------------------------------|
-| Metric                   | Count    |
-| ------------------------ | -----    |
-| SecurityEvent            | 111847   |
-| Syslog                   | 1087     |
-| SecurityAlert            | 35       |
-| SecurityIncident         | 276      |
-| AzureNetworkAnalytics_CL | 2490     |
-| ------------------------------------|
-<br><br><hr>
 
+| Metric                   | Before   | After | Change |
+| ------------------------ | -----    | ----- | ------ |
+| SecurityEvent            | 111847   | 0     | 100%   |
+| Syslog                   | 1087     | 1     | 99.91% |
+| SecurityAlert            | 35       | 0     | 100%   |
+| SecurityIncident         | 276      | 0     | 100%   |
+| AzureNetworkAnalytics_CL | 2490     | 0     | 100%   |
+
+<br><hr>
 <h2>Conclusion</h2>
 This project involved a real-time interactive honeynet within the Microsoft Azure platform. Log sources from the honeynet were forwarded to a Log Analytics Workspace. Microsoft Sentinel, acting as the SIEM tool, triggered alert incidents and mapped these alerts in real-time. After implementing security hardening, significant decreases in security incidents were observed. A 100% incident elimination was achieved for Windows VM's security events, Microsoft Defender for Cloud alerts, Microsoft Sentinel incidents, and malicious NSG inbound traffic. Linux VM's syslog incidents were reduced by 99.91%, demonstrating the effectiveness of the security measures.
 
