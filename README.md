@@ -26,8 +26,9 @@ The first phase of this project consists of three key processes: <i><b>setting u
 <b>Microsoft Sentinel</b>: Connects to LAW and acts as the SIEM tool. It maps global incidents and alerts in real-time using geo-IP watchlist data and KQL queries.<br><br>
 <h3>The unsecured environment was monitored for 24 hours, during which key security metrics were recorded.</h3><hr>
 
-Environment Architecture Before Hardening and Security Controls Implementation<br>
--- Insert Diagram -- <br><br>
+<h2>Environment Architecture Before Hardening and Security Controls Implementation</h2>
+
+![Security Before](https://github.com/Joshua01X/CLOUD-SOC/blob/main/Security%20Before.png?raw=true) <br><br>
 
 <b>The SIEM Workbooks or Attack Maps reflected the following images, pinpointing the various sources of attacks targeting the following resources</b><hr style="border: 0; height: .5px; background: #000;" />
 <b>This attack map shows failed RDP and SMB connection attempts from malicious sources. The map shows persistent attempts to exploit the mentioned protocols, highlighting the necessity to secure remote access to resources and file sharing methods and prevent unathorized access to these critical services.
@@ -61,8 +62,11 @@ The following table shows the metrics measured within the unsecured environment 
 2. <b>Creating private endpoint protections</b> to the azure key vaults and storage account to limit the access to these crucial resources within the private virtual network<br>
 3. <b>Changing the NSGs' inbound traffic rule</b> to only allow my IP address to access the resources in the private network. This ensures that only the configured trusted connections will be established. <br>
 4. <b>Creating a subnet to NSGs</b> to further isolate the operating environment. Additional subnets can be configured to ensure better control and security within each isolated environment.<br>
-5. <b>Implementing security controls</b> recommended by the <b>NIST SP 800-53 Revision 5</b> for Security Controls and <b>NIST SP 800-61 Revision 2</b> for Incident Handling Guidance. <br> These regulatory compliances will further enhance the total security posture of my cloud environment. <br>
--- Insert Diagram -- <br><br>
+5. <b>Implementing security controls</b> recommended by the <b>NIST SP 800-53 Revision 5</b> for Security Controls and <b>NIST SP 800-61 Revision 2</b> for Incident Handling Guidance. These regulatory compliances will further enhance the total security posture of my cloud environment. <br><br><br>
+
+<h2>Environment Architecture After Hardening and Security Controls Implementation</h2>
+
+![Security After](https://github.com/Joshua01X/CLOUD-SOC/blob/main/Security%20After.png?raw=true)
 
 <h2>The Attack Maps After Security Hardening</h2>
 <i></u>All map queries returned no results due to no alter instances generated within the 24 hours period after hardening.</i><br><br>
