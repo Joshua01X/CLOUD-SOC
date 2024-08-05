@@ -2,7 +2,7 @@
 SOC Environment Deployment Through Microsoft Azure
 
 <h1>Cloud Honeynet and Security Operations Center (SOC) Implementation</h1>
-![Cloud SOC DIA](https://github.com/user-attachments/assets/85ff166d-0a38-4828-981b-6dc5d57b153b)
+[![Cloud SOC DIA](https://github.com/user-attachments/assets/85ff166d-0a38-4828-981b-6dc5d57b153b)](https://github.com/Joshua01X/CLOUD-SOC/blob/main/Cloud%20SOC%20DIA.jpg?raw=true)
 
 
 <h2>Introduction</h2>
