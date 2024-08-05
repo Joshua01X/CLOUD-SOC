@@ -2,7 +2,8 @@
 SOC Environment Deployment Through Microsoft Azure
 
 <h1>Cloud Honeynet and Security Operations Center (SOC) Implementation</h1>
-![Cloud SOC Diagram](https://github.com/user-attachments/assets/b5d53e86-527a-40b9-b297-a18ae35858cc)
+![Cloud SOC DIA](https://github.com/user-attachments/assets/85ff166d-0a38-4828-981b-6dc5d57b153b)
+
 
 <h2>Introduction</h2>
 This project is divided into two major phases. The first phase involves setting up honeynet resources and exposing an unsecured cloud environment globally for 24 hours. During this period, logs are aggregated and analyzed. The second phase focuses on security hardening by employing security procedures and regulatory compliance. The environment is then observed for another 24 hours to compare the secured environment against the unsecured environment, verifying the effectiveness of the security measures.
