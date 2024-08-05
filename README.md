@@ -2,8 +2,10 @@
 SOC Environment Deployment Through Microsoft Azure
 
 <h1>Cloud Honeynet and Security Operations Center (SOC) Implementation</h1>
+![Cloud SOC Diagram](https://github.com/user-attachments/assets/b5d53e86-527a-40b9-b297-a18ae35858cc)
 
-<h4>This project is divided into two major phases. The first phase involves setting up honeynet resources and exposing an unsecured cloud environment globally for 24 hours. During this period, logs are aggregated and analyzed. The second phase focuses on security hardening by employing security procedures and regulatory compliance. The environment is then observed for another 24 hours to compare the secured environment against the unsecured environment, verifying the effectiveness of the security measures.</h4><hr>
+<h2>Introduction</h2>
+This project is divided into two major phases. The first phase involves setting up honeynet resources and exposing an unsecured cloud environment globally for 24 hours. During this period, logs are aggregated and analyzed. The second phase focuses on security hardening by employing security procedures and regulatory compliance. The environment is then observed for another 24 hours to compare the secured environment against the unsecured environment, verifying the effectiveness of the security measures.
 
 The first phase of this project consists of three key processes: <i><b>setting up honeynet resources, configuring a central log repository, </i></b>and <b><i>deploying a SIEM tool</i></b>.
 
@@ -20,24 +22,28 @@ The first phase of this project consists of three key processes: <i><b>setting u
 
 <h2>Setting Up the SIEM Tool:</h2>
 
-<b>Microsoft Sentinel</b>: Connects to LAW and acts as the SIEM tool. It maps global incidents and alerts in real-time using geo-IP watchlist data and KQL queries.<br><hr>
-
-<h3>The unsecured environment was monitored for 24 hours, during which key security metrics were recorded.</h3><br>
+<b>Microsoft Sentinel</b>: Connects to LAW and acts as the SIEM tool. It maps global incidents and alerts in real-time using geo-IP watchlist data and KQL queries.<br><br>
+<h3>The unsecured environment was monitored for 24 hours, during which key security metrics were recorded.</h3><hr>
 
 Environment Architecture Before Hardening and Security Controls Implementation<br>
 -- Insert Diagram -- <br><br>
 
-<b>The SIEM Workbooks or Attack Maps reflected the following images, pinpointing the various sources of attacks targeting the following resources</b><br>
+<b>The SIEM Workbooks or Attack Maps reflected the following images, pinpointing the various sources of attacks targeting the following resources</b><hr style="border: 0; height: .5px; background: #000;" />
+<b>This attack map shows failed RDP and SMB connection attempts from malicious sources. The map shows persistent attempts to exploit the mentioned protocols, highlighting the necessity to secure remote access to resources and file sharing methods and prevent unathorized access to these critical services.
 ![WINDOWS-RDP-AUTH-FAIL 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/904c024d-5e4c-42a4-b39b-5c38b00fdac6)
-<br><br>
+<br><br><br>
+This attack map provides the locations and frequency of failed SSH login attempts on the Linux virtual machine, highlighting persistent unauthorized access attempts in several areas. Monitoring these attempts is crucial for identifying and mitigating potential security threats.
 ![LINUX-SSS-AUTH-FAIL 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/62ec780a-55de-4531-a6c2-e2f164cd3ce4)
-<br><br>
+<br><br><br>
+This attack map displays the locations and frequency of authentication failures on the MS SQL Server, pinpointing potential unauthorized access attempts. Tracking these failures is essential for detecting possible breaches and securing database access.
 ![MSSQL 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/d03e7819-2d1e-4cfe-8823-7f28a77bc673)
-<br><br>
+<br><br><br>
+This attack map reflects the consequences of leaving the NSGs inbound rule traffic open to public. Several malicious flows were able to get into the NSGs. Implementing proper traffic rule is crucial in order to prevent unauthorized access into the systems. </b>
 ![NSG-ALLOWED-IN 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/ff925858-db99-4d08-ab45-f40607e691f5)
-<br><br>
+<br><br><br>
 
-<h3>The Following Metrics Before Security Hardening</h3>
+<h2>The Following Metrics Before Security Hardening</h2>
+The following table shows the metrics measured within the unsecured environment for 24 hours: <br>Start Time 2024-07-27 13:25:28 <br>Stop Time 2024-07-28 13:25:28
 
 | Metric                   | Count  |
 |--------------------------|--------|
@@ -49,18 +55,19 @@ Environment Architecture Before Hardening and Security Controls Implementation<b
 
 <br><hr>
 
-The second phase of this project involves implementing the following security hardening controls:
-1. <b>Configuring the firewalls</b>: The built-in firewalls were disabled to the public to restrict unauthorized access and suspicious connections.
-2. <b>Creating private endpoint protections</b> to the azure key vaults and storage account to limit the access to these crucial resources within the private virtual network
-3. <b>Changing the NSGs' inbound traffic rule</b> to only allow my IP address to access the resources in the private network. This ensures that only the configured trusted connections will be established. 
-4. <b>Creating a subnet to NSGs</b> to further isolate the operating environment. Additional subnets can be configured to ensure better control and security within each isolated environment.
-5. <b>Implementing security controls</b> recommended by the <b>NIST SP 800-53 Revision 5</b> for Security Controls and <b>NIST SP 800-61 Revision 2</b> for Incident Handling Guidance. These regulatory compliances will further enhance the total security posture of my cloud environment. <br>
+<h3>The second phase of this project involves implementing the following security hardening controls:</h3>
+1. <b>Configuring the firewalls</b>: The built-in firewalls were disabled to the public to restrict unauthorized access and suspicious connections.<br>
+2. <b>Creating private endpoint protections</b> to the azure key vaults and storage account to limit the access to these crucial resources within the private virtual network<br>
+3. <b>Changing the NSGs' inbound traffic rule</b> to only allow my IP address to access the resources in the private network. This ensures that only the configured trusted connections will be established. <br>
+4. <b>Creating a subnet to NSGs</b> to further isolate the operating environment. Additional subnets can be configured to ensure better control and security within each isolated environment.<br>
+5. <b>Implementing security controls</b> recommended by the <b>NIST SP 800-53 Revision 5</b> for Security Controls and <b>NIST SP 800-61 Revision 2</b> for Incident Handling Guidance. <br> These regulatory compliances will further enhance the total security posture of my cloud environment. <br>
 -- Insert Diagram -- <br><br>
 
-<h3>The Attack Maps After Security Hardening</h3>
+<h2>The Attack Maps After Security Hardening</h2>
 <i></u>All map queries returned no results due to no alter instances generated within the 24 hours period after hardening.</i><br><br>
 
-<h3>The Following Metrics After Security Hardening</h3>
+<h2>The Following Metrics After Security Hardening</h2>
+The following table shows the metrics measured within the unsecured environment for 24 hours: <br>Start Time 2024-07-29 17:02:40 <br> Stop Time 2024-07-30 17:02:40
 
 | Metric                   | Count  |
 |--------------------------|--------|
@@ -72,7 +79,8 @@ The second phase of this project involves implementing the following security ha
 
 <br><hr>
 
-<h3>Comparison Of The Metrics Before & After Security Hardening</h3>
+<h2>Comparison Of The Metrics Before & After Security Hardening</h2>
+Data comparison reflecting the difference of security incident occurence before and after security hardening
 
 | Metric                   | Before   | After | Change |
 | ------------------------ | -----    | ----- | ------ |
