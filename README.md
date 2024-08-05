@@ -34,7 +34,6 @@ The SIEM Workbooks or Attack Maps reflected the following images, pinpointing th
 -- Insert NSG Malicious traffic that got in --<br><br>
 
 <h3>The Following Metrics Before Security Hardening</h3><br>
-# Metrics Table
 
 | Metric                   | Count  |
 |--------------------------|--------|
