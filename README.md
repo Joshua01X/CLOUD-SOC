@@ -34,8 +34,6 @@ The SIEM Workbooks or Attack Maps reflected the following images, pinpointing th
 -- Insert NSG Malicious traffic that got in --<br><br>
 
 <h3>The Following Metrics Before Security Hardening</h3><br>
-# Metrics Table
-
 | Metric                   | Count  |
 |--------------------------|--------|
 | SecurityEvent            | 111847 |
@@ -59,13 +57,14 @@ The second phase of this project involves implementing the following security ha
 All map queries returned no results due to no alter instances generated within the 24 hours period after hardening.<br><br>
 
 <h3>The Following Metrics After Security Hardening</h3>
-| Metric                   | Count
-| ------------------------ | -----
-| SecurityEvent            | 0
-| Syslog                   | 1
-| SecurityAlert            | 0
-| SecurityIncident         | 0
-| AzureNetworkAnalytics_CL | 0 <br><hr>
+| Metric                   | Count  |
+|--------------------------|--------|
+| SecurityEvent            | 0      |
+| Syslog                   | 1      |
+| SecurityAlert            | 0      |
+| SecurityIncident         | 0      |
+| AzureNetworkAnalytics_CL | 0      |
+<br><hr>
 
 <h3>Comparison Of The Metrics Before & After Security Hardening</h3>
 | ------------------------------------|
