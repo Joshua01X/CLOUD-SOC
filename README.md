@@ -33,7 +33,7 @@ The SIEM Workbooks or Attack Maps reflected the following images, pinpointing th
 -- Insert SQL Server Logon Fail --<br>
 -- Insert NSG Malicious traffic that got in --<br><br>
 
-<h3>The Following Metrics Before Security Hardening</h3><br>
+<h3>The Following Metrics Before Security Hardening</h3>
 
 | Metric                   | Count  |
 |--------------------------|--------|
@@ -59,6 +59,7 @@ The second phase of this project involves implementing the following security ha
 All map queries returned no results due to no alter instances generated within the 24 hours period after hardening.<br><br>
 
 <h3>The Following Metrics After Security Hardening</h3>
+
 | Metric                   | Count  |
 |--------------------------|--------|
 | SecurityEvent            | 0      |
