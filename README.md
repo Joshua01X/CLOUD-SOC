@@ -62,7 +62,7 @@ This attack map provides the locations and frequency of failed SSH login attempt
 ![LINUX-SSS-AUTH-FAIL 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/62ec780a-55de-4531-a6c2-e2f164cd3ce4)
 <br><br><br>
 This attack map displays the locations and frequency of authentication failures on the MS SQL Server, pinpointing potential unauthorized access attempts. Tracking these failures is essential for detecting possible breaches and securing database access.
-![MSSQL 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/d03e7819-2d1e-4cfe-8823-7f28a77bc673)
+![MSSQL 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/ef36af38-86b0-4ee6-904b-a4ed2e40ef37)
 <br><br><br>
 This attack map reflects the consequences of leaving the NSGs inbound rule traffic open to public. Several malicious flows were able to get into the NSGs. Implementing proper traffic rule is crucial in order to prevent unauthorized access into the systems. </b>
 ![NSG-ALLOWED-IN 24HRS BEFORE SECURING](https://github.com/user-attachments/assets/ff925858-db99-4d08-ab45-f40607e691f5)
