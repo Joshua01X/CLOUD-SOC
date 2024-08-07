@@ -1,5 +1,4 @@
 # CLOUD-SOC
-Deployment of SOC Environment Through Microsoft Azure
 
 <h1>Cloud Honeynet and Security Operations Center (SOC) Implementation</h1>
 
