@@ -40,11 +40,11 @@ The first phase of this project consists of three key processes: <b>setting up h
 <b>Virtual Machines</b>: Three unsecured virtual machines—one Linux VM and two Windows VMs—serve as entry points for malicious activities. Logs from these machines are collected and sent to LAW by configuring Data Collection Rules and deploying agents.<br><br>
 <b>Network Security Groups (NSGs) and Firewalls</b>: All ports are allowed to the public, increasing the risk of compromise. A storage account stores the flow logs of the NSGs and directs them to the correct LAW.<br><br>
 
-## Setting Up the Central Log Repository:
+<h2><a href="https://github.com/Joshua01X/SIEM-Configuration">Setting Up the Central Log Repository:</h2></a>
 
 <b>Log Analytics Workspace (LAW)</b>: Acts as the central repository for logs from various honeypots. Logs are queried and analyzed using Kusto Query Language (KQL). Microsoft Defender for Cloud is enabled for LAW for basic security setups and continuous exporting of logs.<br><br>
 
-## Setting Up the SIEM Tool:
+<h2><a href="https://github.com/Joshua01X/LAW-Configuration">Setting Up the SIEM Tool:</a></h2>
 
 <b>Microsoft Sentinel</b>: Connects to LAW and acts as the SIEM tool. It maps global incidents and alerts in real-time using geo-IP watchlist data and KQL queries.<br><br>
 <h3>The unsecured environment was monitored for 24 hours, during which key security metrics were recorded.</h3><hr>
