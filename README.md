@@ -6,7 +6,33 @@ Deployment of SOC Environment Through Microsoft Azure
 ![Example Image](https://github.com/Joshua01X/CLOUD-SOC/blob/main/Cloud%20SOC%20DIA.jpg?raw=true)
 
 <h2>Introduction</h2>
-This project is divided into two major phases. The first phase involves setting up honeynet resources and exposing an unsecured cloud environment globally for 24 hours. During this period, logs are aggregated and analyzed. The second phase focuses on security hardening by employing security procedures and regulatory compliance. The environment is then observed for another 24 hours to compare the secured environment against the unsecured environment, verifying the effectiveness of the security measures.
+This project is divided into two major phases. The first phase involves setting up honeynet resources and exposing an unsecured cloud environment globally for 24 hours. During this period, logs are aggregated and analyzed. The second phase focuses on security hardening by employing security procedures and regulatory compliance. The environment is then observed for another 24 hours to compare the secured environment against the unsecured environment, verifying the effectiveness of the security measures. The metrics measured in this lab are as follows:<br>
+
+- SecurityEvent (Windows Event Logs)
+- Syslog (Linux Event Logs)
+- SecurityAlert (Log Analytics Alerts Triggered)
+- SecurityIncident (Incidents created by Sentinel)
+- AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
+
+Here's a rephrased version:
+
+## Azure Components and Regulations Employed In This Lab
+- Azure Virtual Network (VNet)
+- Azure Subnet
+- Azure Firewalls
+- Azure Private Endpoint Security
+- Azure Network Security Groups (NSG)
+- Virtual Machines (2 Windows VMs, 1 Linux VM)
+- Log Analytics Workspace using Kusto Query Language (KQL)
+- Azure Key Vault for Managing Secure Secrets
+- Azure Storage Account for Data Storage
+- Microsoft Sentinel for Security Information and Event Management (SIEM)
+- Microsoft Defender for Cloud to Safeguard Cloud Resources
+- Windows Remote Desktop for Remote Access
+- Command Line Interface (CLI) for System Management
+- PowerShell for Automation and Configuration Management
+- NIST SP 800-53 Revision 5 for Security Controls
+- NIST SP 800-61 Revision 2 for Incident Handling Guidance
 
 The first phase of this project consists of three key processes: <i><b>setting up honeynet resources, configuring a central log repository, </i></b>and <b><i>deploying a SIEM tool</i></b>.
 
