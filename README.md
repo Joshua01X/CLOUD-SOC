@@ -14,8 +14,6 @@ This project is divided into two major phases. The first phase involves setting 
 - SecurityIncident (Incidents created by Sentinel)
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
-Here's a rephrased version:
-
 ## Azure Components and Regulations Employed In This Lab
 - Azure Virtual Network (VNet)
 - Azure Subnet
