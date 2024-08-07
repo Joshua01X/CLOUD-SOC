@@ -33,7 +33,7 @@ This project is divided into two major phases. The first phase involves setting 
 
 The first phase of this project consists of three key processes: <b>setting up honeynet resources, configuring a central log repository, </b>and <b>deploying a SIEM tool</b>.
 
-## Setting Up the Honeynet Resources:
+<a href="https://github.com/Joshua01X/Honeynet-Configuration">Setting Up the Honeynet Resources:</a>
 
 <b>Microsoft Entra ID</b>: Provides entry points for malicious actors, simulating compromised user accounts. Actors can access and alter configurations within the setup, such as blob storage (for storing large amounts of unstructured data) and key vaults (for storing and <br> managing sensitive information). Suspicious activity logs are generated and ingested by the SIEM tool, Microsoft Sentinel, which collects and aggregates these logs in the Log Analytics Workspace (LAW).<br><br>
 <b>SQL Database</b>: An empty SQL Server database setup within a Windows virtual machine serves as another honeypot for malicious activities.<br><br>
