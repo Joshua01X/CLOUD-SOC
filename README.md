@@ -32,7 +32,7 @@ This project is divided into two major phases. The first phase involves setting 
 - NIST SP 800-53 Revision 5 for Security Controls
 - NIST SP 800-61 Revision 2 for Incident Handling Guidance
 
-The first phase of this project consists of three key processes: <b>setting up honeynet resources, configuring a central log repository, </i></b>and <b><i>deploying a SIEM tool</b>.
+The first phase of this project consists of three key processes: <b>setting up honeynet resources, configuring a central log repository, </b>and <b>deploying a SIEM tool</b>.
 
 ## Setting Up the Honeynet Resources:
 
