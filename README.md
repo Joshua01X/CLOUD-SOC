@@ -91,7 +91,7 @@ The following table shows the metrics measured within the unsecured environment 
 
 ![Security After](https://github.com/Joshua01X/CLOUD-SOC/blob/main/Security%20After.png?raw=true)
 
-##The Attack Maps After Security Hardening
+## The Attack Maps After Security Hardening
 
 > All map queries returned no results due to no alter instances generated within the 24 hours period after hardening.</i><br><br>
 
