@@ -30,6 +30,7 @@ This project is divided into two major phases. The first phase involves setting 
 - PowerShell for Automation and Configuration Management
 - NIST SP 800-53 Revision 5 for Security Controls
 - NIST SP 800-61 Revision 2 for Incident Handling Guidance
+- ISO 27001:2013 is a framework for managing and securing information via an ISMS
 
 The <b>first phase</b> of this project consists of three key processes: <b>setting up honeynet resources, configuring a central log repository, </b>and <b>deploying a SIEM tool</b>.
 
