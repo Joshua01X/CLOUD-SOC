@@ -1,6 +1,6 @@
 # CLOUD-SOC
 
-<h1>Cloud Honeynet and Security Operations Center (SOC) Implementation</h1>
+<h1>Cloud Honeynet and Security Operations Center (SOC) Deployment</h1>
 
 ![Example Image](https://github.com/Joshua01X/CLOUD-SOC/blob/main/Cloud%20SOC%20DIA.jpg?raw=true)
 
