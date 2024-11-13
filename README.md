@@ -114,11 +114,11 @@ Data comparison reflecting the difference of security incident occurence before 
 
 | Metric                   | Before   | After | Change |
 | ------------------------ | -----    | ----- | ------ |
-| SecurityEvent            | 111847   | 0     | 100%   |
-| Syslog                   | 1087     | 1     | 99.91% |
-| SecurityAlert            | 35       | 0     | 100%   |
-| SecurityIncident         | 276      | 0     | 100%   |
-| AzureNetworkAnalytics_CL | 2490     | 0     | 100%   |
+| SecurityEvent            | 111847   | 0     | -100%   |
+| Syslog                   | 1087     | 1     | -99.91% |
+| SecurityAlert            | 35       | 0     | -100%   |
+| SecurityIncident         | 276      | 0     | -100%   |
+| AzureNetworkAnalytics_CL | 2490     | 0     | -100%   |
 
 <br><hr>
 ## Conclusion
